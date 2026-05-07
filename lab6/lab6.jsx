@@ -25,7 +25,9 @@ setSubmitted(data); // store data to display
 };
 return (
 <div className="container">
+<h2>Registration Form</h2>
 <form onSubmit={handleSubmit}>
+<label>Name:</label>
 <input
 name="name"
 placeholder="Name"
@@ -33,6 +35,7 @@ onChange={handleChange}
 className={errors.name && "error"}
 />
 <p>{errors.name}</p>
+<label>Email:</label>
 <input
 name="email"
 placeholder="Email"
@@ -40,6 +43,7 @@ onChange={handleChange}
 className={errors.email && "error"}
 />
 <p>{errors.email}</p>
+<label>Password:</label>
 <input
 type={show ? "text" : "password"}
 name="password"
